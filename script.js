@@ -34,7 +34,20 @@ function minCost(arr,n)
 }
  
 // Driver program to test above function
-let len = [4, 3, 2, 6];
+
+var lineNumber = -1;
+readline.on("line", readInputs);
+
+function readInputs(line) {
+  len.push(line);
+  lineNumber++;
+
+  //Exit Condition
+  if (lineNumber == 0) {
+    logic("s");
+    readline.close();
+  }
+}
 let size = len.length;
 document.write(minCost(len, size));
  
